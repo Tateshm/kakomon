@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "kakomon"
-version = "1.0.0"
+name = "kakomon_mod"
+version = "1.0.1"
 description = "情報処理技術者試験の過去問を一括検索するツール"
-authors = ["yuunagi0"]
+authors = ["tateshm"]
 license = "GPL-3.0-only"
 readme = "README.md"
 
