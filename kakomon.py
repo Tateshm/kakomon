@@ -19,12 +19,14 @@ def main():
     ]
     
     # Show checkboxes for each exam
-    it = iter(exams)
-    for i, exam_pair in enumerate(zip(it, it)):
-        first = exam_pair[0]
-        next = exam_pair[1]
-        layout.append([sg.Checkbox(first['name'], key=first['key']),
-                        sg.Checkbox(next['name'], key=next['key'])])
+    column_size = 2
+
+    for s in range(0, len(exams), column_size):
+        slice = exams[s:s+column_size]
+        row = []
+        for exam in slice:
+            row.append(sg.Checkbox(exam['name'], key=exam['key']))
+        layout.append(row)
     
     # Show search button and quit button
     layout.append([sg.Button('GO', key='go'), sg.Button('QUIT', key='quit')])
