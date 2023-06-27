@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "kakomon"
+version = "1.0.0"
+description = "情報処理技術者試験の過去問を一括検索するツール"
+authors = ["yuunagi0"]
+license = "GPL-3.0-only"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+PySimpleGUI = ">=4.60.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
