@@ -1,3 +1,4 @@
+import re
 import urllib.parse
 import webbrowser
 import PySimpleGUI as sg
@@ -54,7 +55,11 @@ def main():
             # Only start searching when the search text is there and at least one exam is selected
             if values['word'] and True in values.values():
 
-                query = '"' + values['word'] + '" ' + ' OR '.join('site:' + e['url'] for e in exams if values[e['key']] == True)
+                # Enclose values other than 'AND' and 'OR' with double quotation marks 
+                words = re.split('\s+',values['word'])
+                words = [f'"{word}"' if word not in ['AND', '&', 'OR', '|'] else word for word in words]
+
+                query = ' '.join(words) + ' ' + ' OR '.join('site:' + e['url'] for e in exams if values[e['key']] == True)
 
                 # Encode the search query and open up default browser
                 query = urllib.parse.quote(query)
