@@ -11,6 +11,9 @@ python = ">=3.10"
 PySimpleGUI = ">=4.60.5"
 
 
+[tool.poetry.group.dev.dependencies]
+nuitka = "^1.6.5"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
