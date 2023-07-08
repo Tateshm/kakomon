@@ -9,7 +9,10 @@ def main():
     exams  = [{'key':'ip', 'name':'ITパスポート', 'url':'https://www.itpassportsiken.com/kakomon'},
               {'key':'sg', 'name':'情報セキュリティマネジメント試験', 'url':'https://www.sg-siken.com/kakomon'},
               {'key':'ap', 'name':'応用情報技術者試験', 'url':'https://www.fe-siken.com/kakomon'},
-              {'key':'fe', 'name':'基本情報技術者試験', 'url':'https://www.ap-siken.com/kakomon'}]
+              {'key':'fe', 'name':'基本情報技術者試験', 'url':'https://www.ap-siken.com/kakomon'},
+              {'key':'sc','name':'安全確保支援士','url':'https://www.sc-siken.com/kakomon'},
+              {'key':'nw','name':'ネットワークスペシャリスト','url':'https://www.nw-siken.com/kakomon'}
+              ]
 
 
     # Show checkboxes for each exam
